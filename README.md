@@ -17,10 +17,10 @@ Trước khi bắt đầu, bạn cần cài đặt:
 
 ##  Kết nối Terraform với AWS 
 
-### Bước 1. Cài CLI 
+### Bước 1. Cài AWS CLI 
 
 
-#### 1.1 Cài CLI bằng 
+#### 1.1 Cài AWS CLI bằng 
 ```bash
 C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 ```
