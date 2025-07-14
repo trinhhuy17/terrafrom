@@ -6,12 +6,11 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
 ## 📑 Table of Contents
 
 - [📦 Prerequisites](#-prerequisites)
-- [Hướng dẫn cài đặt Terraform](#hướng-dẫn-cài-đặt-terraform)
-  - [Bước 1: Cài đặt Terraform cho Windows](#bước-1-cài-đặt-terraform-cho-windows)
-  - [Bước 2: Cài đặt Environment Variable](#bước-2-cài-đặt-environment-variable)
-  - [Bước 3: Kiểm tra cài đặt](#bước-3-kiểm-tra-cài-đặt)
+- [Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows](#hướng-dẫn-cài-đặt-terraform-bằng-chocolatey-trên-windows)
+  - [Bước 1: Cài đặt Chocolatey](#bước-1-cài-đặt-chocolatey)
+  - [Bước 2: Cài đặt Terraform](#bước-2-cài-đặt-terraform)
 - [Kết nối Terraform với AWS](#kết-nối-terraform-với-aws)
-  - [Bước 1: Cài AWS CLI](#bước-1-cài-aws-cli)
+  - [Bước 1: Cài đặt AWS CLI](#bước-1-cài-đặt-aws-cli)
   - [Bước 2: Tạo người dùng IAM và lấy thông tin truy cập](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
   - [Bước 3: Cấu hình AWS CLI](#bước-3-cấu-hình-aws-cli)
   - [Bước 4: Kiểm tra kết nối](#bước-4-kiểm-tra-kết-nối)
