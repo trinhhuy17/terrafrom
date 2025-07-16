@@ -120,7 +120,7 @@ Chọn **(CLI)** rồi **Done**
 Tạo thành công 
 ![example](anh5.png)
 
-### Bước 3. CẤU HÌNH AWS CLI
+### Bước 3. cấu hình AWS CLI
 Sau khi đã có **Access Key** và **Secret Key**, mở CMD:
 
 ```bash
@@ -142,3 +142,44 @@ aws s3 ls
 **Nếu hiện danh sách bucket (hoặc trống), tức là CLI hoạt động thành công.**
 
 ---
+##  Tạo Github Actions
+
+### Tạo Access Key
+Vào IAM chọn **Security credentials**
+![example](anh1.png)
+Chọn **Create access key**
+![example](anh2.png)
+Chọn **(CLI)** rồi **Done**
+![example](anh3.png)
+Đặt tên cho access key 
+![example](anh4.png)
+Tạo thành công 
+![example](anh5.png)
+### Vào repo chọn **setting**
+![example](anh6.png)
+### Vào cột bên trái chọn **secrets and varialbe** -> chọn **Actions**
+### Chọn **New repository secrect**
+![example](anh7.png)
+Tạo  **access key**
+
+điền phần **name**
+```bash
+AWS_ACCESS_KEY_ID
+```
+**Secret**
+```bash
+<dán key của bạn ở CLI AWS>
+```
+xong bấm tạo **add secret**
+
+Tạo **Secret access key**
+
+điền phần **name**
+```bash
+AWS_SECRET_ACCESS_KEY
+```
+**Secret**
+```bash
+<dán key của bạn ở CLI AWS>
+```
+xong bấm tạo **add secret**
