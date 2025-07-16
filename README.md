@@ -120,7 +120,7 @@ Chọn **(CLI)** rồi **Done**
 Tạo thành công 
 ![example](anh5.png)
 
-### Bước 3. CẤU HÌNH AWS CLI
+### Bước 3. cấu hình AWS CLI
 Sau khi đã có **Access Key** và **Secret Key**, mở CMD:
 
 ```bash
@@ -142,7 +142,7 @@ aws s3 ls
 **Nếu hiện danh sách bucket (hoặc trống), tức là CLI hoạt động thành công.**
 
 ---
-# Cài đặt các gói code
+# Cài đặt các gói mã nguồn
 
 ## 1. Các kho lưu trữ
 
@@ -225,9 +225,6 @@ git push -u origin main
 ```
 
 # Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
-
-Tài liệu này hướng dẫn bạn cách tự tạo một repository GitHub mới và đẩy toàn bộ mã nguồn **`vulnerability-scripts`** từ máy tính cá nhân lên GitHub.
-
 ---
 
 ## Yêu cầu
@@ -277,7 +274,7 @@ git branch -M main
 # Đẩy code lên GitHub
 git push -u origin main
 ```
-# Chỉnh sửa code Terraform để chạy code
+# Chỉnh sửa code Terraform để chạy demo
 ## Yêu cầu 
 - Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
 - Đã configure AWS CLI
@@ -298,8 +295,50 @@ VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh b
 - Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
 - Lưu lại code
 
-# Chỉnh sửa code Vulnerability-scripts để chạy code
-# Thực hiện chạy code Terraform
+# Chỉnh sửa code Vulnerability-scripts để chạy demo
+# Tạo Github Actions
+
+### Tạo Access Key
+Truy cập AWS Console, vào IAM, chọn User mà bạn đã configure AWS CLI, sau đó chọn **Security credentials**
+![example](anh1.png)
+Chọn **Create access key**
+![example](anh2.png)
+Chọn **(CLI)** rồi **Done**
+![example](anh3.png)
+Đặt **tag value** cho access key 
+![example](anh4.png)
+Tạo thành công 
+![example](anh5.png)
+### Vào repo `vulnerability-scripts` chọn **setting**
+![example](anh6.png)
+### Vào cột bên trái chọn **secrets and varialbe** -> chọn **Actions**
+### Chọn **New repository secrect**
+![example](anh7.png)
+#### Tạo Github Action  **access key**
+
+Điền phần **name**
+```bash
+AWS_ACCESS_KEY_ID
+```
+**Secret**
+```bash
+<dán key của bạn ở CLI AWS>
+```
+Xong bấm tạo **add secret**
+
+#### Tạo **Secret access key**
+
+Điền phần **name**
+```bash
+AWS_SECRET_ACCESS_KEY
+```
+**Secret**
+```bash
+<dán key của bạn ở CLI AWS>
+```
+Xong bấm tạo **add secret**
+# Thực hiện chạy code Terraform cho demo
+Sử dụng VScode để mở thư mục hackathonterraform, sau đó mở terminal lên và thực hiện các câu lệnh sau: 
 - Khởi tạo Terraform:
 ```
 Terraform init
