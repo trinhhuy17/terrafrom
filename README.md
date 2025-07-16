@@ -142,3 +142,160 @@ aws s3 ls
 **Nếu hiện danh sách bucket (hoặc trống), tức là CLI hoạt động thành công.**
 
 ---
+# Cài đặt các gói code
+
+## 1. Các kho lưu trữ
+
+- **Vulnerability Scripts:** [https://github.com/imLeHuyHoang/vulnerability-scripts.git](https://github.com/imLeHuyHoang/vulnerability-scripts.git)
+- **Hackathon Terraform:** [https://github.com/imLeHuyHoang/hackathonterraform.git](https://github.com/imLeHuyHoang/hackathonterraform.git)
+
+---
+
+## 2. Hướng dẫn chi tiết
+
+### Bước 1: Tải file ZIP từ GitHub
+
+1. Truy cập link GitHub của mỗi kho.
+2. Nhấn nút **Code** (màu xanh lá).
+3. Chọn **Download ZIP** để tải file `.zip` về máy.
+
+---
+
+### Bước 2: Giải nén file ZIP
+
+Sau khi tải về, bạn sẽ có 2 file ZIP:
+
+- `vulnerability-scripts-main.zip`
+- `hackathonterraform-main.zip`
+
+Tiến hành giải nén:
+
+- Nếu dùng **Windows**: Nhấp chuột phải vào file ZIP → Chọn **Extract All...**.
+
+Sau khi giải nén, bạn phải đổi tên các folder thành **vulnerability-scripts** và **hackathonterraform**
+
+# Hướng dẫn tạo repository GitHub cho `hackathonterraform`
+
+## Yêu cầu
+
+- Có tài khoản GitHub ([https://github.com](https://github.com))
+- Đã cài đặt **Git** trên máy ([Tải Git](https://git-scm.com/))
+- Có thư mục `hackathonterraform` đã chuẩn bị sẵn trên máy (đã giải nén nếu tải dưới dạng ZIP)
+
+---
+
+## Bước 1: Tạo repository mới trên GitHub
+
+1. **Đăng nhập** vào tài khoản GitHub.
+2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
+3. Điền thông tin:
+   - **Repository name:** `hackathonterraform`
+   - **Description:** Mô tả ngắn gọn, ví dụ: *Terraform scripts for Hackathon project*
+   - Chọn **Public** hoặc **Private** tuỳ ý.
+   - **Không tick** vào *Initialize this repository with a README* (vì bạn đã có code sẵn).
+4. Bấm **Create repository**.
+
+---
+
+## Bước 2: Kết nối repository từ máy tính
+
+### Mở terminal/command line và chạy các lệnh sau:
+
+```bash
+# Di chuyển vào thư mục hackathonterraform (chỉnh lại đường dẫn cho đúng)
+cd path/to/hackathonterraform
+
+# Khởi tạo Git (nếu chưa có)
+git init
+
+# Thêm remote origin trỏ đến repo GitHub vừa tạo
+git remote add origin https://github.com/<YOUR_USERNAME>/hackathonterraform.git
+
+# Thêm toàn bộ file
+git add .
+
+# Commit lần đầu
+git commit -m "Initial commit"
+
+# Đặt nhánh chính tên 'main'
+git branch -M main
+
+# Đẩy code lên GitHub
+git push -u origin main
+```
+
+# Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
+
+Tài liệu này hướng dẫn bạn cách tự tạo một repository GitHub mới và đẩy toàn bộ mã nguồn **`vulnerability-scripts`** từ máy tính cá nhân lên GitHub.
+
+---
+
+## Yêu cầu
+
+- Có tài khoản GitHub ([https://github.com](https://github.com))
+- Đã cài đặt **Git** trên máy ([Tải Git](https://git-scm.com/))
+- Có thư mục `vulnerability-scripts` đã chuẩn bị sẵn trên máy (đã giải nén nếu tải dưới dạng ZIP)
+
+---
+
+## Bước 1: Tạo repository mới trên GitHub
+
+1. **Đăng nhập** vào tài khoản GitHub.
+2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
+3. Điền thông tin:
+   - **Repository name:** `vulnerability-scripts`
+   - **Description:** Mô tả ngắn gọn, ví dụ: *Scripts for vulnerability scanning and management*
+   - Chọn **Public** hoặc **Private** tuỳ ý.
+   - **Không tick** vào *Initialize this repository with a README* (vì bạn đã có code sẵn).
+4. Bấm **Create repository**.
+
+---
+
+## Bước 2: Kết nối repository từ máy tính
+
+### Mở terminal/command line và chạy các lệnh sau:
+
+```bash
+# Di chuyển vào thư mục vulnerability-scripts (chỉnh lại đường dẫn cho đúng)
+cd path/to/vulnerability-scripts
+
+# Khởi tạo Git (nếu chưa có)
+git init
+
+# Thêm remote origin trỏ đến repo GitHub vừa tạo
+git remote add origin https://github.com/<YOUR_USERNAME>/vulnerability-scripts.git
+
+# Thêm toàn bộ file
+git add .
+
+# Commit lần đầu
+git commit -m "Initial commit"
+
+# Đặt nhánh chính tên 'main'
+git branch -M main
+
+# Đẩy code lên GitHub
+git push -u origin main
+```
+# Chỉnh sửa code Terraform để chạy code
+## Yêu cầu 
+- Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
+- Đã configure AWS CLI
+- Đã có mã nguồn Terraform (`hackathonterraform`)
+
+## Bước 1: Mở thư mục dự án bằng VS Code
+
+1. Mở **Visual Studio Code**.
+2. Chọn **`File` → `Open Folder...`**.
+3. Duyệt đến thư mục `hackathonterraform`
+4. Bấm **`Open`**.
+
+VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+
+## Bước 2: Chỉnh sửa code Terraform
+
+- Mở file `variables.tf` tại thư mục `root`
+- Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
+- Lưu lại code
+
+
