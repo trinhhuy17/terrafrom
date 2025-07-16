@@ -23,7 +23,7 @@ Trước khi bắt đầu, bạn cần cài đặt:
 - Cài đặt [Terraform](https://developer.hashicorp.com/terraform/downloads)
 
 ---
-## Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows
+# Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows
 
 Chocolatey là một trình quản lý gói (Package Manager) dành cho hệ điều hành Windows cho phép bạn cài đặt, cập nhật và gỡ bỏ phần mềm dễ dàng thông qua CLI (Command Line Interface).
 
@@ -80,7 +80,7 @@ on windows_amd64
 - Bạn có thể xem hướng dẫn cài đặt terraform cho Linux, MacOs tại đây: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 ---
 
-##  Kết nối Terraform với AWS 
+#  Kết nối Terraform với AWS 
 
 ### Bước 1. Cài đặt AWS CLI 
 
@@ -98,7 +98,7 @@ aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 ### Bước 2. TẠO NGƯỜI DÙNG IAM VÀ LẤY THÔNG TIN TRUY CẬP
 #### 2.1 Vào AWS console 
 Tìm kiếm [IAM](https://console.aws.amazon.com/iam)
-### 2.2 Tạo IAM User
+#### 2.2 Tạo IAM User
 - Chọn Users > nhấn nút Add users
 
 - Nhập tên (ví dụ: terraform-user)
@@ -106,9 +106,9 @@ Tìm kiếm [IAM](https://console.aws.amazon.com/iam)
 - Chọn Access key - Programmatic access
 
 - Nhấn Next
-### 2.3 Gán quyền
+#### 2.3 Gán quyền
 - tick chọn **AdministratorAccess**
-### 2.4 Tạo Access Key
+#### 2.4 Tạo Access Key
 Vào IAM chọn **Security credentials**
 ![example](anh1.png)
 Chọn **Create access key**
@@ -172,7 +172,7 @@ Tiến hành giải nén:
 
 - Nếu dùng **Windows**: Nhấp chuột phải vào file ZIP → Chọn **Extract All...**.
 
-Sau khi giải nén, bạn phải đổi tên các folder thành **vulnerability-scripts** và **hackathonterraform**
+Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
 
 # Hướng dẫn tạo repository GitHub cho `hackathonterraform`
 
@@ -184,7 +184,7 @@ Sau khi giải nén, bạn phải đổi tên các folder thành **vulnerability
 
 ---
 
-## Bước 1: Tạo repository mới trên GitHub
+### Bước 1: Tạo repository mới trên GitHub
 
 1. **Đăng nhập** vào tài khoản GitHub.
 2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
@@ -197,9 +197,9 @@ Sau khi giải nén, bạn phải đổi tên các folder thành **vulnerability
 
 ---
 
-## Bước 2: Kết nối repository từ máy tính
+### Bước 2: Kết nối repository từ máy tính
 
-### Mở terminal/command line và chạy các lệnh sau:
+#### Mở terminal/command line và chạy các lệnh sau:
 
 ```bash
 # Di chuyển vào thư mục hackathonterraform (chỉnh lại đường dẫn cho đúng)
@@ -238,7 +238,7 @@ Tài liệu này hướng dẫn bạn cách tự tạo một repository GitHub m
 
 ---
 
-## Bước 1: Tạo repository mới trên GitHub
+### Bước 1: Tạo repository mới trên GitHub
 
 1. **Đăng nhập** vào tài khoản GitHub.
 2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
@@ -251,9 +251,9 @@ Tài liệu này hướng dẫn bạn cách tự tạo một repository GitHub m
 
 ---
 
-## Bước 2: Kết nối repository từ máy tính
+### Bước 2: Kết nối repository từ máy tính
 
-### Mở terminal/command line và chạy các lệnh sau:
+#### Mở terminal/command line và chạy các lệnh sau:
 
 ```bash
 # Di chuyển vào thư mục vulnerability-scripts (chỉnh lại đường dẫn cho đúng)
@@ -283,7 +283,7 @@ git push -u origin main
 - Đã configure AWS CLI
 - Đã có mã nguồn Terraform (`hackathonterraform`)
 
-## Bước 1: Mở thư mục dự án bằng VS Code
+### Bước 1: Mở thư mục dự án bằng VS Code
 
 1. Mở **Visual Studio Code**.
 2. Chọn **`File` → `Open Folder...`**.
@@ -292,10 +292,30 @@ git push -u origin main
 
 VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
 
-## Bước 2: Chỉnh sửa code Terraform
+### Bước 2: Chỉnh sửa code Terraform
 
 - Mở file `variables.tf` tại thư mục `root`
 - Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
 - Lưu lại code
+
+# Chỉnh sửa code Vulnerability-scripts để chạy code
+# Thực hiện chạy code Terraform
+- Khởi tạo Terraform:
+```
+Terraform init
+```
+- Kiểm tra trước những thay đổi Terraform sẽ thực hiện:
+```
+Terraform plan
+```
+- Áp dụng các thay đổi để tạo hoặc cập nhật hạ tầng:
+```
+Terraform apply
+```
+- Xóa toàn bộ tài nguyên được quản lý bởi Terraform (Lưu ý: chỉ xóa toàn bộ khi đã thực hiện xong demo):
+```
+Terraform destroy
+```
+
 
 
