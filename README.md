@@ -1,7 +1,7 @@
 # 🌐 Challenge 8 - Group 208
 
-Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để kết nối Terraform với tài khoản AWS . 
-
+Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để kết nối Terraform với tài khoản AWS. Đề tài **Challenge 8: CI/CD PIPELINE FOR AUTOMATING WINDOWS SECURITY PATCHING FROM VULNERABILITY REPORT**
+![example](a.png)
 ---
 ## 📑 Table of Contents
 
@@ -338,7 +338,7 @@ AWS_SECRET_ACCESS_KEY
 ```
 Xong bấm tạo **add secret**
 # Thực hiện chạy code Terraform cho demo
-Sử dụng VScode để mở thư mục hackathonterraform, sau đó mở terminal lên và thực hiện các câu lệnh sau: 
+Sử dụng VScode để mở thư mục **hackathonterraform**, sau đó mở terminal lên và thực hiện các câu lệnh sau: 
 - Khởi tạo Terraform:
 ```
 Terraform init
@@ -355,6 +355,27 @@ Terraform apply
 ```
 Terraform destroy
 ```
+# Đẩy file data lên Amazon S3 để chạy pipeline
+Yêu cầu
+Đã chạy câu lệnh terraform apply
+Đã có file data
+
+Kiểm tra Bucket đã tạo
+Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
+
+Chọn **<TÊN BUCKET CỦA BẠN>**
+![example](s3-1.png)
 
 
+
+Chọn **raw-vulnerability-data/**
+![example](s3-2.png)
+Bấm **Upload**
+![example](s3-3.png)
+Bấm **Add folder**
+![example](s3-4.png)
+Chọn file **2025-Quarter-2.xlsx** -> click **Upload**
+![example](s3-5.png)
+Đây là giao diện khi **Upload** file thành công 
+![example](s3-6.png)
 
