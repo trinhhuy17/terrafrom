@@ -45,7 +45,10 @@
   - [Bước 1. Tạo Access Key](#1-tạo-access-key)  
   - [Bước 2. Thêm Secrets vào GitHub](#2-thêm-secrets-vào-github)  
  
-- [Thực hiện chạy code Terraform demo](#thực-hiện-chạy-code-terraform-cho-demo)  
+- [Thực hiện chạy code Terraform ](#thực-hiện-chạy-code-terraform-cho-demo)
+- [Đẩy file data lên Amazon S3 để chạy pipeline](#đẩy-file-data-lên-amazon-s3-để-chạy-pipeline)
+
+
   
 ---
 
