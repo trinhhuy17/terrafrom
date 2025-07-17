@@ -386,7 +386,7 @@ Terraform destroy
 - Bấm **Upload**
 ![example](s3-3.PNG)
 
-- Bấm **Add folder**
+- Bấm **Add File**
 ![example](s3-4.PNG)
 
 - Chọn file **2025-Quarter-2.xlsx** -> click **Upload**
