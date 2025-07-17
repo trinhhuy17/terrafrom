@@ -2,7 +2,7 @@
 
 **CHALLENGE 8: CI/CD PIPELINE FOR AUTOMATING WINDOWS SECURITY PATCHING FROM VULNERABILITY REPORT**
 
-**Architecture of Solution:
+Architecture of Solution:
 ![example](a.png)
 ---
 ## 📑 Table of Contents
