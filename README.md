@@ -5,7 +5,7 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
 ---
 ## 📑 Table of Contents
 
-- [📦 Prerequisites](#-prerequisites)
+- [Prerequisites](#-prerequisites)
 
 
 - [Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows](#hướng-dẫn-cài-đặt-terraform-bằng-chocolatey-trên-windows)
@@ -46,7 +46,7 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
   
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 Trước khi bắt đầu, bạn cần cài đặt:
 - Bạn phải có [Tài khoản AWS](https://aws.amazon.com/vi/free/?trk=947f595b-f07f-42a1-bfc4-acf832730bac&sc_channel=ps&ef_id=CjwKCAjw7MLDBhAuEiwAIeXGIVdjnkAmtIdxP6A3pQo_RD5aR_WbnyoGnObQJq8dK6ZkvrULgqdhnhoCkT4QAvD_BwE:G:s&s_kwcid=AL!4422!3!566333972302!e!!g!!t%E1%BA%A1o%20t%C3%A0i%20kho%E1%BA%A3n%20aws!15461586425!133325773849&gad_campaignid=15461586425&gbraid=0AAAAADjHtp_VsxSh0NtOGy0Q984Eg9pDc&gclid=CjwKCAjw7MLDBhAuEiwAIeXGIVdjnkAmtIdxP6A3pQo_RD5aR_WbnyoGnObQJq8dK6ZkvrULgqdhnhoCkT4QAvD_BwE&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
@@ -108,7 +108,7 @@ on windows_amd64
 
 ```
 
-- Bạn có thể xem hướng dẫn cài đặt terraform cho Linux, MacOs tại đây: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+- Bạn có thể xem hướng dẫn cài đặt terraform cho Linux, MacOs [tại đây]( https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 ---
 
 #  Kết nối Terraform với AWS 
@@ -126,7 +126,7 @@ C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 C:\> aws --version
 aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 ```
-### Bước 2. TẠO NGƯỜI DÙNG IAM VÀ LẤY THÔNG TIN TRUY CẬP
+### Bước 2. Tạo thông tin người dùng và thông tin truy cập
 #### 2.1 Vào AWS console 
 Tìm kiếm [IAM](https://console.aws.amazon.com/iam)
 #### 2.2 Tạo IAM User
@@ -205,7 +205,7 @@ Tiến hành giải nén:
 Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
 
 
-# Chỉnh sửa code 
+# Chỉnh sửa tham số 
 
 ## 1.1: Chỉnh sửa code Terraform để chạy demo
 ### Bước 1: Mở thư mục dự án bằng VS Code
@@ -280,7 +280,7 @@ Chọn **Create access key**
 ![example](anh2.png)
 Chọn **(CLI)** rồi **Done**
 ![example](anh3.png)
-Đặt **tag value** cho access key 
+Đặt **tag value** cho Github Actions key
 ![example](anh8.png)
 Tạo thành công 
 ![example](anh5.png)
@@ -292,7 +292,7 @@ Tạo thành công
 
 ### Vào cột bên trái chọn **secrets and varialbe** -> chọn **Actions**
 ### Chọn **New repository secrect**
-![example](anh7.png)
+![example](anh9.png)
 #### Tạo Github Action  **access key**
 
 Điền phần **name**
