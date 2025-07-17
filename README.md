@@ -37,7 +37,7 @@
 
 - [Chỉnh sửa code Vulnerability-scripts để chạy ](#chỉnh-sửa-code-vulnerability-scripts)
   - [Bước 1: Mở thư mục dự án bằng VS Code](#bước-1-mở-thư-mục-dự-án-bằng-vs-code)
-  - [Bước 2: Chỉnh sửa code Vulnerability-scripts](#chỉnh-sửa-code-vulnerability-scripts-để-chạy)
+  - [Bước 2: Chỉnh sửa code Vulnerability-scripts](#bước-2-chỉnh-sửa-code-vulnerability-scripts-để-chạy)
  
     
 - [Thiết lập GitHub Actions với AWS Credentials](#thiết-lập-github-actions-với-aws-credentials)
