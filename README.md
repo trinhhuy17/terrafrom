@@ -27,9 +27,6 @@
   - [Bước 1: Các kho lưu trữ](#bước-1-các-kho-lưu-trữ)  
   - [Bước 2: Hướng dẫn tải và giải nén](#bước-2-hướng-dẫn-tải-và-giải-nén) 
  
-- [Chỉnh sửa tham số](#chỉnh-sửa-tham-số)  
-  - [Bước 1: Sửa code Terraform](#1-chỉnh-sửa-tham-số-terraform-trước-khi-triển-khai)  
-  - [Bước 2: Sửa code vulnerability-scripts](#2-chỉnh-sửa-tham-số-vulnerability-scripts)
 
 
 
@@ -214,51 +211,6 @@ aws s3 ls
 - Nếu bạn dùng **Windows**: Nhấp chuột phải vào file ZIP → Chọn **Extract All...**.
 
 - Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
-
-
-# Chỉnh sửa tham số 
-
-## 1. Chỉnh sửa tham số Terraform trước khi triển khai
-### Bước 1: Mở thư mục dự án bằng VS Code
-
-1.1. Mở **Visual Studio Code**.
-1.2. Chọn **`File` → `Open Folder...`**.
-1.3. Duyệt đến thư mục `hackathonterraform`
-1.4. Bấm **`Open`**.
-1.5. VSCode sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
-
-### Bước 2: Chỉnh sửa tham số Terraform
-
-2.1. Mở file `variables.tf` tại thư mục `root`
-
-![example](png10.png)
-
-2.2. Thực hiện thay đổi biến `project_name` thành biến duy nhất của bạn.
-
-![example](anh11.png)
-
-2.3. Lưu lại code
-
-## 2. Chỉnh sửa tham số Vulnerability-scripts
-
-### Bước 1: Mở thư mục dự án bằng VSCode
-
-1. Mở **Visual Studio Code**.
-2. Chọn **`File` → `Open Folder...`**.
-3. Duyệt đến thư mục `Vulnerability-scripts `
-4. Bấm **`Open`**.
-
-VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
-
-### Bước 2.2: Chỉnh sửa code Terraform
-
-- Mở file `XXX` tại thư mục `XXX`
-
-![example]()
-- Thực hiện thay đổi biến `XXX` thành biến duy nhất của bạn.
-![example]()
-
-- Lưu lại code
 
   
 # Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
