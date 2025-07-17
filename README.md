@@ -21,7 +21,8 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
 Trước khi bắt đầu, bạn cần cài đặt:
 - Bạn phải có [Tài khoản AWS](https://aws.amazon.com/vi/free/?trk=947f595b-f07f-42a1-bfc4-acf832730bac&sc_channel=ps&ef_id=CjwKCAjw7MLDBhAuEiwAIeXGIVdjnkAmtIdxP6A3pQo_RD5aR_WbnyoGnObQJq8dK6ZkvrULgqdhnhoCkT4QAvD_BwE:G:s&s_kwcid=AL!4422!3!566333972302!e!!g!!t%E1%BA%A1o%20t%C3%A0i%20kho%E1%BA%A3n%20aws!15461586425!133325773849&gad_campaignid=15461586425&gbraid=0AAAAADjHtp_VsxSh0NtOGy0Q984Eg9pDc&gclid=CjwKCAjw7MLDBhAuEiwAIeXGIVdjnkAmtIdxP6A3pQo_RD5aR_WbnyoGnObQJq8dK6ZkvrULgqdhnhoCkT4QAvD_BwE&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all)
 - Cài đặt [Terraform](https://developer.hashicorp.com/terraform/downloads)
-
+- Có tài khoản GitHub ([https://github.com](https://github.com))
+- Đã cài đặt **Git** trên máy ([Tải Git](https://git-scm.com/))
 ---
 # Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows
 
@@ -176,13 +177,7 @@ Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-
 
 # Hướng dẫn tạo repository GitHub cho `hackathonterraform`
 
-## Yêu cầu
 
-- Có tài khoản GitHub ([https://github.com](https://github.com))
-- Đã cài đặt **Git** trên máy ([Tải Git](https://git-scm.com/))
-- Có thư mục `hackathonterraform` đã chuẩn bị sẵn trên máy (đã giải nén nếu tải dưới dạng ZIP)
-
----
 
 ### Bước 1: Tạo repository mới trên GitHub
 
@@ -225,15 +220,8 @@ git push -u origin main
 ```
 
 # Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
----
 
-## Yêu cầu
 
-- Có tài khoản GitHub ([https://github.com](https://github.com))
-- Đã cài đặt **Git** trên máy ([Tải Git](https://git-scm.com/))
-- Có thư mục `vulnerability-scripts` đã chuẩn bị sẵn trên máy (đã giải nén nếu tải dưới dạng ZIP)
-
----
 
 ### Bước 1: Tạo repository mới trên GitHub
 
@@ -275,10 +263,7 @@ git branch -M main
 git push -u origin main
 ```
 # Chỉnh sửa code Terraform để chạy demo
-## Yêu cầu 
-- Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
-- Đã configure AWS CLI
-- Đã có mã nguồn Terraform (`hackathonterraform`)
+
 
 ### Bước 1: Mở thư mục dự án bằng VS Code
 
@@ -306,7 +291,7 @@ Chọn **Create access key**
 Chọn **(CLI)** rồi **Done**
 ![example](anh3.png)
 Đặt **tag value** cho access key 
-![example](anh4.png)
+![example](anh8.png)
 Tạo thành công 
 ![example](anh5.png)
 ### Vào repo `vulnerability-scripts` chọn **setting**
