@@ -296,10 +296,10 @@ VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh b
 ### Bước 2: Chỉnh sửa code Vulnerability-scripts
 
 - Trong folder `.github`, bạn truy cập `scripts`, tại file `create-deployment-packages.py` bạn sửa giá trị của biến `S3_BUCKET` thành `os.environ.get('S3_BUCKET', 'hackathon-vulnerability-vpbank-dev-vulnerability-data')`
-![example](scriptcode-3.png)
+![example](scriptcode-3.PNG)
 
 - Trong foler `.github`, bạn truy cập `workflows`, tại file `deploy-packages.yml`, bạn sửa giá trị của biến `S3_BUCKET` thành `hackathon-vulnerability-vpbank-dev-vulnerability-data`
-![example](scriptcode-2.png)
+![example](scriptcode-2.PNG)
 
 - Sau khi sửa xong mã nguồn, bạn thực hiện commit code mới lên **Github Repo** `vulnerability-scripts` của bạn bằng các câu lệnh sau: 
 ```
