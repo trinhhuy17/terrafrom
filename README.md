@@ -32,7 +32,7 @@
     
 - [Điều chỉnh một số tham số Terraform](#điều-chỉnh-một-số-tham-số-terraform)
   - [Bước 1: Mở thư mục dự án bằng VS Code](#bước-1-mở-thư-mục-dự-án-bằng-vs-code)
-  - [Bước 2: Chỉnh sửa code Terraform](#chỉnh-sửa-code-terraform)
+  - [Bước 2: Chỉnh sửa code Terraform](#bước-2-chỉnh-sửa-code-terraform)
 
 
 - [Chỉnh sửa code Vulnerability-scripts để chạy ](#chỉnh-sửa-code-vulnerability-scripts)
