@@ -8,7 +8,7 @@
 ---
 ## 📑 Table of Contents
 
-- [Prerequisites](#-prerequisites)
+- [Prerequisites](#prerequisites)
 
 
 - [Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows](#hướng-dẫn-cài-đặt-terraform-bằng-chocolatey-trên-windows)
