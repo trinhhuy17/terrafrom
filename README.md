@@ -415,7 +415,7 @@ Terraform apply
 Terraform destroy
 ```
 
-# Đẩy file data lên Amazon S3 để chạy pipeline
+# Upload file và vá tự động 
 
 ### Yêu cầu
 
