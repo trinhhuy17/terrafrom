@@ -1,6 +1,7 @@
-# 🌐 Challenge 8 - Group 208
+# 🌐 Challenge 8 - Group 208 - Hướng dẫn chi tiết triển khai hạ tầng
 
-Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để kết nối Terraform với tài khoản AWS. Đề tài **Challenge 8: CI/CD PIPELINE FOR AUTOMATING WINDOWS SECURITY PATCHING FROM VULNERABILITY REPORT**
+Đề tài **Challenge 8: CI/CD PIPELINE FOR AUTOMATING WINDOWS SECURITY PATCHING FROM VULNERABILITY REPORT**
+
 ![example](a.png)
 ---
 ## 📑 Table of Contents
