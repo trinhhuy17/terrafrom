@@ -448,7 +448,7 @@ Terraform destroy
 - Đợi cho **CodePipeline** chạy hết quy trình 
 - Hình ảnh bên dưới là quy trình chạy thành công 
 ![example](log.png)
-8. Quay về **hackathon-vulnerability-vpbank-dev-vulnerability-data** -> Chọn **log/**
+8. Quay về **hackathon-vulnerability-vpbank-dev-vulnerability-data** -> Chọn **logs/**
 - Kiểm tra in ra file logs của những bản vá 
 - Đây là ví dụ của bản ghi **của 1 máy windows-sever-2019**
 ![example](s3-8.PNG)
