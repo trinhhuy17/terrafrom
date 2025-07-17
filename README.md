@@ -20,6 +20,8 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
  
 
 - [Tạo repository cho file hackathonterraform](#tạo-repository-cho-file-hackathonterraform)
+  - [Bước 1: Tạo repository mới trên GitHub](#bước-1-tạo-repository-mới-trên-github)
+  - [Bước 2: Kết nối repository từ máy tính](#bước-2-kết-nối-repository-từ-máy-tính)
 - [Chỉnh sửa code để chạy demo](#chỉnh-sửa-code)  
   - [1. Sửa code Terraform](#1-chỉnh-sửa-code-terraform-để-chạy-demo)  
   - [2. Sửa code vulnerability-scripts](#2-chỉnh-sửa-code-vulnerability-scripts-để-chạy-demo)  
