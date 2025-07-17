@@ -425,7 +425,7 @@ Terraform destroy
 
 ### Kiểm tra Bucket đã tạo
 
-#### Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
+#### Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console và tìm dịch vụ S3 để kiểm tra xem đã có Bucket hay chưa
 
 1. Chọn Bucket **hackathon-vulnerability-vpbank-dev-vulnerability-data**
    ![example](s3-1.PNG)
