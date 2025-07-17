@@ -120,6 +120,7 @@ on windows_amd64
 ### Bước 1. Cài đặt AWS CLI 
 
 1.1. Mở Windows Powershell trên máy với quyền Admin (Run as administrator)
+
 1.2. Chạy câu lệnh sau:
 
 ```bash
@@ -127,6 +128,7 @@ C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 ```
 
 1.3 Để xác nhận việc cài đặt, bạn tìm kiếm "cmd" để mở cửa sổ dòng lệnh (Command Prompt), sau đó sử dụng lệnh aws --version.
+
 1.4. Kết quả:
 
 ```bash
@@ -193,20 +195,18 @@ aws s3 ls
 
 ### 2.1: Tải file ZIP từ GitHub
 
-2.1.1. Truy cập GitHub của mỗi kho lưu trữ qua đường link tại Bước 1.
-
-2.1.2. Nhấn nút **Code** (màu xanh lá).
-
-2.1.3. Chọn **Download ZIP** để tải file `.zip` về máy.
+1. Truy cập GitHub của mỗi kho lưu trữ qua đường link tại Bước 1.
+2. Nhấn nút **Code** (màu xanh lá).
+3. Chọn **Download ZIP** để tải file `.zip` về máy.
 
 ### 2.2: Giải nén file ZIP
 
-2.2.1 Sau khi tải về, bạn sẽ có 2 file ZIP:
+1. Sau khi tải về, bạn sẽ có 2 file ZIP:
 
 - `vulnerability-scripts-main.zip`
 - `hackathonterraform-main.zip`
 
-2.2.2. Tiến hành giải nén:
+2. Tiến hành giải nén:
 
 - Nếu bạn dùng **Windows**: Nhấp chuột phải vào file ZIP → Chọn **Extract All...**.
 
@@ -217,14 +217,14 @@ aws s3 ls
 
 ### Bước 1: Tạo repository mới trên GitHub
 
-1.1. **Đăng nhập** vào tài khoản GitHub.
-1.2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
-1.3. Điền thông tin:
+1. **Đăng nhập** vào tài khoản GitHub.
+2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
+3. Điền thông tin:
    - **Repository name:** `vulnerability-scripts`
    - **Description:** Mô tả ngắn gọn, ví dụ: *Scripts for vulnerability scanning and management*
    - Chọn **Public** hoặc **Private** tuỳ ý.
    - **Không tick** vào *Initialize this repository with a README* (vì bạn đã có code sẵn).
-1.4. Bấm **Create repository**.
+4. Bấm **Create repository**.
 
 ---
 
@@ -311,23 +311,23 @@ git push -u origin main
 # Thiết lập GitHub Actions với AWS Credentials
 
 ## Bước 1. Tạo Access Key
-1.1. Truy cập AWS Console, vào IAM, chọn User mà bạn đã configure AWS CLI, sau đó chọn **Security credentials**
-1.2. Thực hiện tạo Access Key theo hướng dẫn [bên trên](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
+1. Truy cập AWS Console, vào IAM, chọn User mà bạn đã configure AWS CLI, sau đó chọn **Security credentials**
+2. Thực hiện tạo Access Key theo hướng dẫn [bên trên](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
 
 
 ## Bước 2. Thêm Secrets vào GitHub
 
-2.1. Vào repo `vulnerability-scripts` chọn **setting**
+1. Vào repo `vulnerability-scripts` chọn **setting**
 
 ![example](anh6.png)
 
-2.2. Tại thanh menu bên trái, chọn **secrets and varialbe** -> chọn **Actions**
+2. Tại thanh menu bên trái, chọn **secrets and varialbe** -> chọn **Actions**
 
-2.3. Chọn **New repository secrect**
+3. Chọn **New repository secrect**
 
 ![example](anh9.png)
 
-2.4 Tạo Github Action  **Access key**
+4 Tạo Github Action  **Access key**
 
 - Đặt tên cho phần **name**
   VD: "AWS_ACCESS_KEY_ID"
@@ -338,7 +338,7 @@ git push -u origin main
 ```
 - Sau đó bấm tạo **add secret**
 
-2.5. Tạo **Secret access key**
+5. Tạo **Secret access key**
 
 - Đặt tên cho phần **name**
   VD: "AWS_SECRET_ACCESS_KEY"
@@ -369,7 +369,7 @@ Terraform apply
 Terraform destroy
 ```
 # Đẩy file data lên Amazon S3 để chạy pipeline
-**Yêu cầu**
+### Yêu cầu
 - Đã chạy câu lệnh terraform apply
 - Đã có file data
 
