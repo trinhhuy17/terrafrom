@@ -126,8 +126,7 @@ on windows_amd64
 ```bash
 C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 ```
-
-3 Để xác nhận việc cài đặt, bạn tìm kiếm "cmd" để mở cửa sổ dòng lệnh (Command Prompt), sau đó sử dụng lệnh aws --version.
+3. Để xác nhận việc cài đặt, bạn tìm kiếm "cmd" để mở cửa sổ dòng lệnh (Command Prompt), sau đó sử dụng lệnh aws --version.
 
 4. Kết quả:
 
@@ -139,26 +138,26 @@ aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 1. Tại trang console, bạn hãy tìm kiếm [IAM](https://console.aws.amazon.com/iam)
 
 2. Thực hiện tạo IAM User bằng cách:
-- Chọn Users > nhấn nút Add users
+  - Chọn Users > nhấn nút Add users
 
-- Nhập tên (ví dụ: terraform-user)
+  - Nhập tên (ví dụ: terraform-user)
 
-- Chọn Access key - Programmatic access
+  - Chọn Access key - Programmatic access
 
-- Nhấn Next
+  - Nhấn Next
 3. Thực hiện gán quyền bằng cách:
-- tick chọn **AdministratorAccess**
+  - tick chọn **AdministratorAccess**
 4. Tạo Access Key
-- Vào IAM chọn **Security credentials**
+  - Vào IAM chọn **Security credentials**
 ![example](anh1.png)
-- Tiếp theo, chọn **Create access key**
+  - Tiếp theo, chọn **Create access key**
 ![example](anh2.png)
-- Chọn **Command Line Interface (CLI)**
-- Xác nhận bằng cách tick vào ô **I understand the above recommendation and want to proceed to create an access key** rồi chọn **Next**
+  - Chọn **Command Line Interface (CLI)**
+  - Xác nhận bằng cách tick vào ô **I understand the above recommendation and want to proceed to create an access key** rồi chọn **Next**
 ![example](anh3.png)
-- Bạn có thể ghi mô tả của access key sau đó bấm **Create Access Key**
+  - Bạn có thể ghi mô tả của access key sau đó bấm **Create Access Key**
 ![example](anh4.png)
-- Kết quả sau khi tạo thành công 
+  - Kết quả sau khi tạo thành công 
 ![example](anh5.png)
 
 ### Bước 3. cấu hình AWS CLI
@@ -187,30 +186,30 @@ aws s3 ls
 
 ## Bước 1: Các kho lưu trữ
 **Lưu ý**: File script được lưu riêng tại một folder khác vi.
-- **Vulnerability Scripts:** [https://github.com/imLeHuyHoang/vulnerability-scripts.git](https://github.com/imLeHuyHoang/vulnerability-scripts.git)
-- **Hackathon Terraform:** [https://github.com/imLeHuyHoang/hackathonterraform.git](https://github.com/imLeHuyHoang/hackathonterraform.git)
+  - **Vulnerability Scripts:** [https://github.com/imLeHuyHoang/vulnerability-scripts.git](https://github.com/imLeHuyHoang/vulnerability-scripts.git)
+  - **Hackathon Terraform:** [https://github.com/imLeHuyHoang/hackathonterraform.git](https://github.com/imLeHuyHoang/hackathonterraform.git)
 
 
 ### Bước 2. Hướng dẫn tải và giải nén
 
-#### 2.1: Tải file ZIP từ GitHub
+#### 2.1 Tải file ZIP từ GitHub
 
 1. Truy cập GitHub của mỗi kho lưu trữ qua đường link tại Bước 1.
 2. Nhấn nút **Code** (màu xanh lá).
 3. Chọn **Download ZIP** để tải file `.zip` về máy.
 
-#### 2.2: Giải nén file ZIP
+#### 2.2 Giải nén file ZIP
 
 1. Sau khi tải về, bạn sẽ có 2 file ZIP:
 
-- `vulnerability-scripts-main.zip`
-- `hackathonterraform-main.zip`
+  - `vulnerability-scripts-main.zip`
+  - `hackathonterraform-main.zip`
 
 2. Tiến hành giải nén:
 
-- Nếu bạn dùng **Windows**: Nhấp chuột phải vào file ZIP → Chọn **Extract All...**.
+  - Nếu bạn dùng **Windows**: Nhấp chuột phải vào file ZIP → Chọn **Extract All...**.
 
-- Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
+  - Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
 
   
 # Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
@@ -257,18 +256,18 @@ git push -u origin main
 
 # Chỉnh sửa code Terraform
 ### Yêu cầu 
-- Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
-- Đã configure AWS CLI
-- Đã có mã nguồn Terraform (`hackathonterraform`)
-- Đã tạo **Github Repo** cho `vulnerability-scripts`
+  - Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
+  - Đã configure AWS CLI
+  - Đã có mã nguồn Terraform (`hackathonterraform`)
+  - Đã tạo **Github Repo** cho `vulnerability-scripts`
 
 ### Bước 1: Mở thư mục dự án bằng VS Code
 
-1. Mở **Visual Studio Code**.
-2. Chọn **`File` → `Open Folder...`**.
-3. Duyệt đến thư mục `hackathonterraform`
-4. Bấm **`Open`**.
-5. VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+  - Mở **Visual Studio Code**.
+  - Chọn **`File` → `Open Folder...`**.
+  - Duyệt đến thư mục `hackathonterraform`
+  - Bấm **`Open`**.
+  - VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
 
 ### Bước 2: Chỉnh sửa code Terraform
 
@@ -279,17 +278,17 @@ git push -u origin main
 
 # Chỉnh sửa code Vulnerability-scripts
 ### Yêu cầu 
-- Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
-- Đã có mã nguồn `vulnerability-scripts`
-- Đã tạo **Github Repo** cho `vulnerability-scripts`
+  - Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
+  - Đã có mã nguồn `vulnerability-scripts`
+  - Đã tạo **Github Repo** cho `vulnerability-scripts`
 
 ### Bước 1: Mở thư mục dự án bằng VSCode
 
-1. Mở **Visual Studio Code**.
-2. Chọn **`File` → `Open Folder...`**.
-3. Duyệt đến thư mục `vulnerability-scripts`
-4. Bấm **`Open`**.
-5. VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+  - Mở **Visual Studio Code**.
+  - Chọn **`File` → `Open Folder...`**.
+  - Duyệt đến thư mục `vulnerability-scripts`
+  - Bấm **`Open`**.
+  - VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
 
 ### Bước 2: Chỉnh sửa code Vulnerability-scripts
 
@@ -329,26 +328,26 @@ git push -u origin main
 
 4 Tạo Github Action  **Access key**
 
-- Đặt tên cho phần **name**
+  - Đặt tên cho phần **name**
   VD: "AWS_ACCESS_KEY_ID"
   
-- Copy Access Key vừa tạo và paste vào phần**Secret**
+  - Copy Access Key vừa tạo và paste vào phần**Secret**
 ```bash
 <Dán key của bạn ở CLI AWS>
 ```
-- Sau đó bấm tạo **add secret**
+  - Sau đó bấm tạo **add secret**
 
 5. Tạo **Secret access key**
 
-- Đặt tên cho phần **name**
+  - Đặt tên cho phần **name**
   VD: "AWS_SECRET_ACCESS_KEY"
 
-- Copy Secret Access Key vừa tạo và paste vào phần **Secret**
+  - Copy Secret Access Key vừa tạo và paste vào phần **Secret**
 ```bash
 <dán key của bạn ở CLI AWS>
 ```
 
-- Xong bấm tạo **add secret**
+  - Xong bấm tạo **add secret**
   
 # Thực hiện chạy code Terraform
 Sử dụng VScode để mở thư mục **hackathonterraform**, sau đó mở terminal lên và thực hiện các câu lệnh sau: 
@@ -370,8 +369,8 @@ Terraform destroy
 ```
 # Đẩy file data lên Amazon S3 để chạy pipeline
 ### Yêu cầu
-- Đã chạy câu lệnh terraform apply
-- Đã có file data
+  - Đã chạy câu lệnh terraform apply
+  - Đã có file data
 
 ### Kiểm tra Bucket đã tạo
 ####Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
