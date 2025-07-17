@@ -1,6 +1,6 @@
-# 🌐 Challenge 8 - Group 208 - Hướng dẫn chi tiết triển khai hạ tầng
+# 🌐 Challenge 8 - Nhóm 208 - Hướng dẫn chi tiết triển khai hạ tầng
 
-Đề tài **Challenge 8: CI/CD PIPELINE FOR AUTOMATING WINDOWS SECURITY PATCHING FROM VULNERABILITY REPORT**
+**Challenge 8: CI/CD PIPELINE FOR AUTOMATING WINDOWS SECURITY PATCHING FROM VULNERABILITY REPORT**
 
 ![example](a.png)
 ---
