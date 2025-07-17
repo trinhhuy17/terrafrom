@@ -377,19 +377,19 @@ Terraform destroy
 
 2.Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
 
-- Chọn **<TÊN BUCKET CỦA BẠN>**
+- Chọn Bucket **hackathon-vulnerability-vpbank-dev-vulnerability-data**
 ![example](s3-1.PNG)
 
-- Chọn **raw-vulnerability-data/**
+- Chọn Bucket **raw-vulnerability-data/**
 ![example](s3-2.PNG)
 
 - Bấm **Upload**
 ![example](s3-3.PNG)
 
-- Bấm **Add File**
+- Bấm **Add file**
 ![example](s3-4.PNG)
 
-- Chọn file **2025-Quarter-2.xlsx** -> click **Upload**
+- Chọn file **data** -> click **Upload**
 ![example](s3-5.PNG)
 
 - Đây là giao diện khi **Upload** file thành công 
