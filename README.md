@@ -14,6 +14,21 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
   - [Bước 2: Tạo người dùng IAM và lấy thông tin truy cập](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
   - [Bước 3: Cấu hình AWS CLI](#bước-3-cấu-hình-aws-cli)
   - [Bước 4: Kiểm tra kết nối](#bước-4-kiểm-tra-kết-nối)
+- [Cài đặt mã nguồn và quản lý GitHub Repository](#cài-đặt-các-gói-mã-nguồn)  
+  - [1. Các kho lưu trữ](#1-các-kho-lưu-trữ)  
+  - [2. Hướng dẫn tải và giải nén](#2-hướng-dẫn-tải-và-giải-nén) 
+ 
+
+- [Tạo repository cho file hackathonterraform](#tạo-repository-cho-file-hackathonterraform)
+- [Chỉnh sửa code để chạy demo](#chỉnh-sửa-code)  
+  - [1. Sửa code Terraform](#1-chỉnh-sửa-code-terraform-để-chạy-demo)  
+  - [2. Sửa code vulnerability-scripts](#2-chỉnh-sửa-code-vulnerability-scripts-để-chạy-demo)  
+- [Thiết lập GitHub Actions với AWS Credentials](#thiết-lập-github-actions-với-aws-credentials)  
+  - [1. Tạo Access Key](#1tạo-access-key)  
+  - [2. Thêm Secrets vào GitHub](#2-thêm-secrets-vào-github)  
+ 
+- [Thực hiện chạy code Terraform demo](#thực-hiện-chạy-code-terraform-cho-demo)  
+  
 ---
 
 ## 📦 Prerequisites
@@ -150,9 +165,8 @@ aws s3 ls
 - **Vulnerability Scripts:** [https://github.com/imLeHuyHoang/vulnerability-scripts.git](https://github.com/imLeHuyHoang/vulnerability-scripts.git)
 - **Hackathon Terraform:** [https://github.com/imLeHuyHoang/hackathonterraform.git](https://github.com/imLeHuyHoang/hackathonterraform.git)
 
----
 
-## 2. Hướng dẫn chi tiết
+## 2. Hướng dẫn tải và giải nén
 
 ### Bước 1: Tải file ZIP từ GitHub
 
@@ -160,7 +174,7 @@ aws s3 ls
 2. Nhấn nút **Code** (màu xanh lá).
 3. Chọn **Download ZIP** để tải file `.zip` về máy.
 
----
+
 
 ### Bước 2: Giải nén file ZIP
 
@@ -175,11 +189,11 @@ Tiến hành giải nén:
 
 Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
 
-# Hướng dẫn tạo repository GitHub cho `hackathonterraform`
+# Tạo repository cho file hackathonterraform
 
 
 
-### Bước 1: Tạo repository mới trên GitHub
+## Bước 1: Tạo repository mới trên GitHub
 
 1. **Đăng nhập** vào tài khoản GitHub.
 2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
@@ -192,9 +206,8 @@ Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-
 
 ---
 
-### Bước 2: Kết nối repository từ máy tính
-
-#### Mở terminal/command line và chạy các lệnh sau:
+## Bước 2: Kết nối repository từ máy tính
+Mở terminal/command line và chạy các lệnh sau:
 
 ```bash
 # Di chuyển vào thư mục hackathonterraform (chỉnh lại đường dẫn cho đúng)
@@ -262,9 +275,9 @@ git branch -M main
 # Đẩy code lên GitHub
 git push -u origin main
 ```
-# Chỉnh sửa code Terraform để chạy demo
+# Chỉnh sửa code 
 
-
+## 1. Chỉnh sửa code Terraform để chạy demo
 ### Bước 1: Mở thư mục dự án bằng VS Code
 
 1. Mở **Visual Studio Code**.
@@ -280,10 +293,11 @@ VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh b
 - Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
 - Lưu lại code
 
-# Chỉnh sửa code Vulnerability-scripts để chạy demo
-# Tạo Github Actions
+## 2. Chỉnh sửa code Vulnerability-scripts để chạy demo
 
-### Tạo Access Key
+# Thiết lập GitHub Actions với AWS Credentials
+
+## 1.Tạo Access Key
 Truy cập AWS Console, vào IAM, chọn User mà bạn đã configure AWS CLI, sau đó chọn **Security credentials**
 ![example](anh1.png)
 Chọn **Create access key**
@@ -294,8 +308,12 @@ Chọn **(CLI)** rồi **Done**
 ![example](anh8.png)
 Tạo thành công 
 ![example](anh5.png)
+
+
+## 2. Thêm Secrets vào GitHub
 ### Vào repo `vulnerability-scripts` chọn **setting**
 ![example](anh6.png)
+
 ### Vào cột bên trái chọn **secrets and varialbe** -> chọn **Actions**
 ### Chọn **New repository secrect**
 ![example](anh7.png)
