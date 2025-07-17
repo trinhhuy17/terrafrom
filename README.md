@@ -64,6 +64,7 @@ Chocolatey là một trình quản lý gói (Package Manager) dành cho hệ đi
 ### Bước 1: Cài đặt Chocolatey
 
 1.1. Mở Windows Powershell trên máy với quyền Admin (Run as administrator)
+
 1.2. Chạy câu lệnh sau:
 ```bash
 
@@ -190,14 +191,15 @@ aws s3 ls
 
 ## Bước 2. Hướng dẫn tải và giải nén
 
-###2.1: Tải file ZIP từ GitHub
+### 2.1: Tải file ZIP từ GitHub
 
 2.1.1. Truy cập GitHub của mỗi kho lưu trữ qua đường link tại Bước 1.
+
 2.1.2. Nhấn nút **Code** (màu xanh lá).
+
 2.1.3. Chọn **Download ZIP** để tải file `.zip` về máy.
 
-
-###2.2: Giải nén file ZIP
+### 2.2: Giải nén file ZIP
 
 2.2.1 Sau khi tải về, bạn sẽ có 2 file ZIP:
 
@@ -227,8 +229,11 @@ aws s3 ls
 2.1. Mở file `variables.tf` tại thư mục `root`
 
 ![example](png10.png)
+
 2.2. Thực hiện thay đổi biến `project_name` thành biến duy nhất của bạn.
+
 ![example](anh11.png)
+
 2.3. Lưu lại code
 
 ## 2. Chỉnh sửa tham số Vulnerability-scripts
@@ -303,12 +308,17 @@ git push -u origin main
 
 
 ## Bước 2. Thêm Secrets vào GitHub
+
 2.1. Vào repo `vulnerability-scripts` chọn **setting**
+
 ![example](anh6.png)
 
 2.2. Tại thanh menu bên trái, chọn **secrets and varialbe** -> chọn **Actions**
+
 2.3. Chọn **New repository secrect**
+
 ![example](anh9.png)
+
 2.4 Tạo Github Action  **Access key**
 
 - Đặt tên cho phần **name**
@@ -356,6 +366,7 @@ Terraform destroy
 - Đã có file data
 
 1. Kiểm tra Bucket đã tạo
+
 2.Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
 
 - Chọn **<TÊN BUCKET CỦA BẠN>**
