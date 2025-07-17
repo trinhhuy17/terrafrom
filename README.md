@@ -6,25 +6,38 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
 ## 📑 Table of Contents
 
 - [📦 Prerequisites](#-prerequisites)
+
+
 - [Hướng dẫn cài đặt Terraform bằng Chocolatey trên Windows](#hướng-dẫn-cài-đặt-terraform-bằng-chocolatey-trên-windows)
   - [Bước 1: Cài đặt Chocolatey](#bước-1-cài-đặt-chocolatey)
   - [Bước 2: Cài đặt Terraform](#bước-2-cài-đặt-terraform)
+
+  
 - [Kết nối Terraform với AWS](#kết-nối-terraform-với-aws)
   - [Bước 1: Cài đặt AWS CLI](#bước-1-cài-đặt-aws-cli)
   - [Bước 2: Tạo người dùng IAM và lấy thông tin truy cập](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
   - [Bước 3: Cấu hình AWS CLI](#bước-3-cấu-hình-aws-cli)
   - [Bước 4: Kiểm tra kết nối](#bước-4-kiểm-tra-kết-nối)
+
+
 - [Cài đặt mã nguồn và quản lý GitHub Repository](#cài-đặt-các-gói-mã-nguồn)  
   - [1. Các kho lưu trữ](#1-các-kho-lưu-trữ)  
   - [2. Hướng dẫn tải và giải nén](#2-hướng-dẫn-tải-và-giải-nén) 
  
-
-- [Tạo repository cho file hackathonterraform](#tạo-repository-cho-file-hackathonterraform)
-  - [Bước 1: Tạo repository mới trên GitHub](#bước-1-tạo-repository-mới-trên-github)
-  - [Bước 2: Kết nối repository từ máy tính](#bước-2-kết-nối-repository-từ-máy-tính)
 - [Chỉnh sửa code để chạy demo](#chỉnh-sửa-code)  
   - [1. Sửa code Terraform](#1-chỉnh-sửa-code-terraform-để-chạy-demo)  
-  - [2. Sửa code vulnerability-scripts](#2-chỉnh-sửa-code-vulnerability-scripts-để-chạy-demo)  
+  - [2. Sửa code vulnerability-scripts](#2-chỉnh-sửa-code-vulnerability-scripts-để-chạy-demo)
+
+
+
+- [Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`](#hướng-dẫn-tạo-repository-github-cho-vulnerability-scripts)
+  - [Bước 1: Tạo repository mới trên GitHub](#bước-1-tạo-repository-mới-trên-github)
+  - [Bước 2: Kết nối repository từ máy tính](#bước-2-kết-nối-repository-từ-máy-tính)
+
+
+  
+
+
 - [Thiết lập GitHub Actions với AWS Credentials](#thiết-lập-github-actions-với-aws-credentials)  
   - [1. Tạo Access Key](#1tạo-access-key)  
   - [2. Thêm Secrets vào GitHub](#2-thêm-secrets-vào-github)  
@@ -191,48 +204,28 @@ Tiến hành giải nén:
 
 Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-scripts` và `hackathonterraform`
 
-# Tạo repository cho file hackathonterraform
+
+# Chỉnh sửa code 
+
+## 1. Chỉnh sửa code Terraform để chạy demo
+### Bước 1: Mở thư mục dự án bằng VS Code
+
+1. Mở **Visual Studio Code**.
+2. Chọn **`File` → `Open Folder...`**.
+3. Duyệt đến thư mục `hackathonterraform`
+4. Bấm **`Open`**.
+
+VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+
+### Bước 2: Chỉnh sửa code Terraform
+
+- Mở file `variables.tf` tại thư mục `root`
+- Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
+- Lưu lại code
+
+## 2. Chỉnh sửa code Vulnerability-scripts để chạy demo
 
 
-
-## Bước 1: Tạo repository mới trên GitHub
-
-1. **Đăng nhập** vào tài khoản GitHub.
-2. Ở góc phải trên cùng, bấm nút **`+`** ➜ chọn **`New repository`**.
-3. Điền thông tin:
-   - **Repository name:** `hackathonterraform`
-   - **Description:** Mô tả ngắn gọn, ví dụ: *Terraform scripts for Hackathon project*
-   - Chọn **Public** hoặc **Private** tuỳ ý.
-   - **Không tick** vào *Initialize this repository with a README* (vì bạn đã có code sẵn).
-4. Bấm **Create repository**.
-
----
-
-## Bước 2: Kết nối repository từ máy tính
-Mở terminal/command line và chạy các lệnh sau:
-
-```bash
-# Di chuyển vào thư mục hackathonterraform (chỉnh lại đường dẫn cho đúng)
-cd path/to/hackathonterraform
-
-# Khởi tạo Git (nếu chưa có)
-git init
-
-# Thêm remote origin trỏ đến repo GitHub vừa tạo
-git remote add origin https://github.com/<YOUR_USERNAME>/hackathonterraform.git
-
-# Thêm toàn bộ file
-git add .
-
-# Commit lần đầu
-git commit -m "Initial commit"
-
-# Đặt nhánh chính tên 'main'
-git branch -M main
-
-# Đẩy code lên GitHub
-git push -u origin main
-```
 
 # Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
 
@@ -277,25 +270,6 @@ git branch -M main
 # Đẩy code lên GitHub
 git push -u origin main
 ```
-# Chỉnh sửa code 
-
-## 1. Chỉnh sửa code Terraform để chạy demo
-### Bước 1: Mở thư mục dự án bằng VS Code
-
-1. Mở **Visual Studio Code**.
-2. Chọn **`File` → `Open Folder...`**.
-3. Duyệt đến thư mục `hackathonterraform`
-4. Bấm **`Open`**.
-
-VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
-
-### Bước 2: Chỉnh sửa code Terraform
-
-- Mở file `variables.tf` tại thư mục `root`
-- Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
-- Lưu lại code
-
-## 2. Chỉnh sửa code Vulnerability-scripts để chạy demo
 
 # Thiết lập GitHub Actions với AWS Credentials
 
