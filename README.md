@@ -420,7 +420,8 @@ Terraform destroy
 ### Yêu cầu
 
 - Đã chạy câu lệnh terraform apply
-- Đã có file data
+- Đã có file data (file data **2025-Quarter-2.xlsx**  nằm trong folder **hackathonterraform**)
+
 
 ### Kiểm tra Bucket đã tạo
 
@@ -443,3 +444,7 @@ Terraform destroy
 
 6. Đây là giao diện khi **Upload** file thành công
    ![example](s3-6.PNG)
+3. Lên thanh tìm kiếm **CodePipeline**
+- Đợi cho **CodePipeline** chạy hết quy trình 
+- Hình ảnh bên dưới là quy trình chạy thành công 
+![example](log.png)
