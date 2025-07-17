@@ -255,6 +255,59 @@ git branch -M main
 git push -u origin main
 ```
 
+# Chỉnh sửa code Terraform để triển khai
+## Yêu cầu 
+- Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
+- Đã configure AWS CLI
+- Đã có mã nguồn Terraform (`hackathonterraform`)
+- Đã tạo **Github Repo** cho `vulnerability-scripts`
+
+### Bước 1: Mở thư mục dự án bằng VS Code
+
+1. Mở **Visual Studio Code**.
+2. Chọn **`File` → `Open Folder...`**.
+3. Duyệt đến thư mục `hackathonterraform`
+4. Bấm **`Open`**.
+
+VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+
+### Bước 2: Chỉnh sửa code Terraform
+
+- Mở file `terraform.tfvars` tại thư mục `root`
+- Thực hiện thay đổi giá trị biến `project_name`từ `hackathon-vulnerability` thành `hackathon-vulnerability-vpbank`
+
+- Sau đó, mở file `variables.tf` trong thư mục `root`. Tại đó, bạn thực hiện thay đổi biến `github_repo_url` với giá trị `default` là link github chứa source code `vulnerability srcipts` mà bạn đã tạo.
+
+# Chỉnh sửa code Vulnerability-scripts để chạy demo
+## Yêu cầu 
+- Máy tính đã cài **Visual Studio Code** ([Tải VS Code](https://code.visualstudio.com/))
+- Đã có mã nguồn `vulnerability-scripts`
+- Đã tạo **Github Repo** cho `vulnerability-scripts`
+
+### Bước 1: Mở thư mục dự án bằng VS Code
+
+1. Mở **Visual Studio Code**.
+2. Chọn **`File` → `Open Folder...`**.
+3. Duyệt đến thư mục `vulnerability-scripts`
+4. Bấm **`Open`**.
+
+VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+
+### Bước 2: Chỉnh sửa code Vulnerability-scripts
+
+- Trong folder `.github`, bạn truy cập `scripts`, tại file `create-deployment-packages.py` bạn sửa giá trị của biến `S3_BUCKET` thành `os.environ.get('S3_BUCKET', 'hackathon-vulnerability-vpbank-dev-vulnerability-data')`
+![example](scriptcode-3.png)
+
+- Trong foler `.github`, bạn truy cập `workflows`, tại file `deploy-packages.yml`, bạn sửa giá trị của biến `S3_BUCKET` thành `hackathon-vulnerability-vpbank-dev-vulnerability-data`
+![example](scriptcode-2.png)
+
+- Sau khi sửa xong mã nguồn, bạn thực hiện commit code mới lên **Github Repo** `vulnerability-scripts` của bạn bằng các câu lệnh sau: 
+```
+git add .
+git commit -m "new code scripts commit"
+git push -u origin main
+```
+
 # Thiết lập GitHub Actions với AWS Credentials
 
 ## Bước 1. Tạo Access Key
