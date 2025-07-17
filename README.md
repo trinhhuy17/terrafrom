@@ -134,6 +134,7 @@ aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 ```
 ### Bước 2. Tạo thông tin người dùng và thông tin truy cập
 2.1. Tại trang console, bạn hãy tìm kiếm [IAM](https://console.aws.amazon.com/iam)
+
 2.2. Thực hiện tạo IAM User bằng cách:
 - Chọn Users > nhấn nút Add users
 
