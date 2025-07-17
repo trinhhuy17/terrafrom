@@ -24,7 +24,7 @@ Hướng dẫn triển khai hạ tầng đơn giản theo từng bước để k
   - [Bước 1: Các kho lưu trữ](#bước-1-các-kho-lưu-trữ)  
   - [Bước 2: Hướng dẫn tải và giải nén](#bước-2-hướng-dẫn-tải-và-giải-nén) 
  
-- [Chỉnh sửa code để chạy demo](#chỉnh-sửa-code)  
+- [Chỉnh sửa tham số](#chỉnh-sửa-tham-số)  
   - [Bước 1: Sửa code Terraform](#1-chỉnh-sửa-code-terraform-để-chạy-demo)  
   - [Bước 2: Sửa code vulnerability-scripts](#2-chỉnh-sửa-code-vulnerability-scripts-để-chạy-demo)
 
@@ -207,7 +207,7 @@ Sau khi giải nén, bạn phải đổi tên các folder thành `vulnerability-
 
 # Chỉnh sửa tham số 
 
-## 1.1: Chỉnh sửa code Terraform để chạy demo
+## 1. Chỉnh sửa code Terraform để chạy demo
 ### Bước 1: Mở thư mục dự án bằng VS Code
 
 1. Mở **Visual Studio Code**.
@@ -220,13 +220,34 @@ VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh b
 ### Bước 2.2: Chỉnh sửa code Terraform
 
 - Mở file `variables.tf` tại thư mục `root`
-- Thực hiện thay đổi biến `project_name` từ `hackathon-vulnerability`.
+
+![example](png10.png)
+- Thực hiện thay đổi biến `project_name` thành biến duy nhất của bạn.
+![example](anh11.png)
+
 - Lưu lại code
 
 ## 2. Chỉnh sửa code Vulnerability-scripts để chạy demo
 
 
+### Bước 1: Mở thư mục dự án bằng VS Code
 
+1. Mở **Visual Studio Code**.
+2. Chọn **`File` → `Open Folder...`**.
+3. Duyệt đến thư mục `Vulnerability-scripts `
+4. Bấm **`Open`**.
+
+VS Code sẽ mở toàn bộ project, hiển thị cấu trúc file bên thanh bên trái.
+
+### Bước 2.2: Chỉnh sửa code Terraform
+
+- Mở file `XXX` tại thư mục `XXX`
+
+![example]()
+- Thực hiện thay đổi biến `XXX` thành biến duy nhất của bạn.
+![example]()
+
+- Lưu lại code
 # Hướng dẫn tạo repository GitHub cho `vulnerability-scripts`
 
 
