@@ -29,7 +29,16 @@
 
   - [Bước 1: Tạo repository mới trên GitHub](#bước-1-tạo-repository-mới-trên-github)
   - [Bước 2: Kết nối repository từ máy tính](#bước-2-kết-nối-repository-từ-máy-tính)
+- [Chỉnh sửa code Terraform để triển khai](#chỉnh-sửa-code-terraform-để-triển-khai)
+  - [Bước 1: Mở thư mục dự án bằng VS Code](#bước-1-mở-thư-mục-dự-án-bằng-vs-code)
+  - [Bước 2: Chỉnh sửa code Terraform](#chỉnh-sửa-code-terraform-để-triển-khai)
 
+
+- [Chỉnh sửa code Vulnerability-scripts để chạy ](#chỉnh-sửa-code-vulnerability-scripts-để-chạy)
+  - [Bước 1: Mở thư mục dự án bằng VS Code](#bước-1-mở-thư-mục-dự-án-bằng-vs-code)
+  - [Bước 2: Chỉnh sửa code Vulnerability-scripts](#chỉnh-sửa-code-vulnerability-scripts-để-chạy)
+ 
+    
 - [Thiết lập GitHub Actions với AWS Credentials](#thiết-lập-github-actions-với-aws-credentials)
 
   - [Bước 1. Tạo Access Key](#bước-1-tạo-access-key)
