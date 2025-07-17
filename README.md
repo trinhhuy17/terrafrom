@@ -18,7 +18,7 @@
   
 - [Kết nối Terraform với AWS](#kết-nối-terraform-với-aws)
   - [Bước 1: Cài đặt AWS CLI](#bước-1-cài-đặt-aws-cli)
-  - [Bước 2: Tạo người dùng IAM và lấy thông tin truy cập](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
+  - [Bước 2: Tạo người dùng IAM và lấy thông tin truy cập](#bước-2-tạo-thông-tin-người-dùng-và-thông-tin-truy-cập)
   - [Bước 3: Cấu hình AWS CLI](#bước-3-cấu-hình-aws-cli)
   - [Bước 4: Kiểm tra kết nối](#bước-4-kiểm-tra-kết-nối)
 
@@ -28,8 +28,8 @@
   - [Bước 2: Hướng dẫn tải và giải nén](#bước-2-hướng-dẫn-tải-và-giải-nén) 
  
 - [Chỉnh sửa tham số](#chỉnh-sửa-tham-số)  
-  - [Bước 1: Sửa code Terraform](#1-chỉnh-sửa-code-terraform-để-chạy-demo)  
-  - [Bước 2: Sửa code vulnerability-scripts](#2-chỉnh-sửa-code-vulnerability-scripts-để-chạy-demo)
+  - [Bước 1: Sửa code Terraform](#1-chỉnh-sửa-tham-số-terraform-trước-khi-triển-khai)  
+  - [Bước 2: Sửa code vulnerability-scripts](#2-chỉnh-sửa-tham-số-vulnerability-scripts)
 
 
 
@@ -42,8 +42,8 @@
 
 
 - [Thiết lập GitHub Actions với AWS Credentials](#thiết-lập-github-actions-với-aws-credentials)  
-  - [Bước 1. Tạo Access Key](#1-tạo-access-key)  
-  - [Bước 2. Thêm Secrets vào GitHub](#2-thêm-secrets-vào-github)  
+  - [Bước 1. Tạo Access Key](#bước-1-tạo-access-key)  
+  - [Bước 2. Thêm Secrets vào GitHub](#bước-2-thêm-secrets-vào-github)  
  
 - [Thực hiện chạy code Terraform ](#thực-hiện-chạy-code-terraform-cho-demo)
 - [Đẩy file data lên Amazon S3 để chạy pipeline](#đẩy-file-data-lên-amazon-s3-để-chạy-pipeline)
