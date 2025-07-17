@@ -63,9 +63,9 @@ Chocolatey là một trình quản lý gói (Package Manager) dành cho hệ đi
 
 ### Bước 1: Cài đặt Chocolatey
 
-1.1. Mở Windows Powershell trên máy với quyền Admin (Run as administrator)
+1. Mở Windows Powershell trên máy với quyền Admin (Run as administrator)
 
-1.2. Chạy câu lệnh sau:
+2. Chạy câu lệnh sau:
 ```bash
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; `
@@ -74,13 +74,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; `
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 ```
-1.3. Kiểm tra phiên bản của Chocolatey bằng câu lệnh:
+3. Kiểm tra phiên bản của Chocolatey bằng câu lệnh:
 ```bash
 
 choco -v
 
 ```
-1.4. Kết quả:
+4. Kết quả:
 ```bash
 
 2.3.0
@@ -89,21 +89,21 @@ choco -v
    
 ### Bước 2: Cài đặt Terraform
 
-2.1. Trên Windows Powershell, chạy câu lệnh sau:
+1. Trên Windows Powershell, chạy câu lệnh sau:
 
 ```bash
 
 choco install terraform -y
 
 ```
-2.2. Kiểm tra phiên bản của Terraform bằng câu lệnh:
+2. Kiểm tra phiên bản của Terraform bằng câu lệnh:
 
 ```bash
 
 terraform -v
 
 ```
-2.3. Kết quả:
+3. Kết quả:
 
 ```bash
 
@@ -119,26 +119,26 @@ on windows_amd64
 
 ### Bước 1. Cài đặt AWS CLI 
 
-1.1. Mở Windows Powershell trên máy với quyền Admin (Run as administrator)
+1. Mở Windows Powershell trên máy với quyền Admin (Run as administrator)
 
-1.2. Chạy câu lệnh sau:
+2. Chạy câu lệnh sau:
 
 ```bash
 C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 ```
 
-1.3 Để xác nhận việc cài đặt, bạn tìm kiếm "cmd" để mở cửa sổ dòng lệnh (Command Prompt), sau đó sử dụng lệnh aws --version.
+3 Để xác nhận việc cài đặt, bạn tìm kiếm "cmd" để mở cửa sổ dòng lệnh (Command Prompt), sau đó sử dụng lệnh aws --version.
 
-1.4. Kết quả:
+4. Kết quả:
 
 ```bash
 C:\> aws --version
 aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 ```
 ### Bước 2. Tạo thông tin người dùng và thông tin truy cập
-2.1. Tại trang console, bạn hãy tìm kiếm [IAM](https://console.aws.amazon.com/iam)
+1. Tại trang console, bạn hãy tìm kiếm [IAM](https://console.aws.amazon.com/iam)
 
-2.2. Thực hiện tạo IAM User bằng cách:
+2. Thực hiện tạo IAM User bằng cách:
 - Chọn Users > nhấn nút Add users
 
 - Nhập tên (ví dụ: terraform-user)
@@ -146,9 +146,9 @@ aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 - Chọn Access key - Programmatic access
 
 - Nhấn Next
-2.3. Thực hiện gán quyền bằng cách:
+3. Thực hiện gán quyền bằng cách:
 - tick chọn **AdministratorAccess**
-2.4. Tạo Access Key
+4. Tạo Access Key
 - Vào IAM chọn **Security credentials**
 ![example](anh1.png)
 - Tiếp theo, chọn **Create access key**
@@ -162,12 +162,12 @@ aws-cli/2.19.1 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
 ![example](anh5.png)
 
 ### Bước 3. cấu hình AWS CLI
-3.1. Sau khi đã có **Access Key** và **Secret Key**, mở CMD:
+1. Sau khi đã có **Access Key** và **Secret Key**, mở CMD:
 
 ```bash
 aws configure
 ```
-3.2. Sau đó nhập thông tin:
+2. Sau đó nhập thông tin:
 ```bash
 AWS Access Key ID [None]: <dán key của bạn>
 AWS Secret Access Key [None]: <dán key của bạn>
@@ -191,15 +191,15 @@ aws s3 ls
 - **Hackathon Terraform:** [https://github.com/imLeHuyHoang/hackathonterraform.git](https://github.com/imLeHuyHoang/hackathonterraform.git)
 
 
-## Bước 2. Hướng dẫn tải và giải nén
+### Bước 2. Hướng dẫn tải và giải nén
 
-### 2.1: Tải file ZIP từ GitHub
+#### 2.1: Tải file ZIP từ GitHub
 
 1. Truy cập GitHub của mỗi kho lưu trữ qua đường link tại Bước 1.
 2. Nhấn nút **Code** (màu xanh lá).
 3. Chọn **Download ZIP** để tải file `.zip` về máy.
 
-### 2.2: Giải nén file ZIP
+#### 2.2: Giải nén file ZIP
 
 1. Sau khi tải về, bạn sẽ có 2 file ZIP:
 
@@ -310,12 +310,12 @@ git push -u origin main
 
 # Thiết lập GitHub Actions với AWS Credentials
 
-## Bước 1. Tạo Access Key
+### Bước 1. Tạo Access Key
 1. Truy cập AWS Console, vào IAM, chọn User mà bạn đã configure AWS CLI, sau đó chọn **Security credentials**
 2. Thực hiện tạo Access Key theo hướng dẫn [bên trên](#bước-2-tạo-người-dùng-iam-và-lấy-thông-tin-truy-cập)
 
 
-## Bước 2. Thêm Secrets vào GitHub
+### Bước 2. Thêm Secrets vào GitHub
 
 1. Vào repo `vulnerability-scripts` chọn **setting**
 
@@ -373,25 +373,24 @@ Terraform destroy
 - Đã chạy câu lệnh terraform apply
 - Đã có file data
 
-1. Kiểm tra Bucket đã tạo
+### Kiểm tra Bucket đã tạo
+####Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
 
-2.Sau khi đã chạy terraform apply thành công, bạn truy cập AWS Console, truy cập dịch vụ S3 và kiểm tra xem đã có Bucket hay chưa
-
-- Chọn Bucket **hackathon-vulnerability-vpbank-dev-vulnerability-data**
+1. Chọn Bucket **hackathon-vulnerability-vpbank-dev-vulnerability-data**
 ![example](s3-1.PNG)
 
-- Chọn Bucket **raw-vulnerability-data/**
+2. Chọn Bucket **raw-vulnerability-data/**
 ![example](s3-2.PNG)
 
-- Bấm **Upload**
+3. Bấm **Upload**
 ![example](s3-3.PNG)
 
-- Bấm **Add file**
+4. Bấm **Add file**
 ![example](s3-4.PNG)
 
-- Chọn file **data** -> click **Upload**
+5. Chọn file **data** -> click **Upload**
 ![example](s3-5.PNG)
 
-- Đây là giao diện khi **Upload** file thành công 
+6. Đây là giao diện khi **Upload** file thành công 
 ![example](s3-6.PNG)
 
